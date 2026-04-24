@@ -22,9 +22,9 @@ args = "Build mod"
 name = "Build mod"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./gradlew build --no-daemon --console=plain"
-
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "JAVA_HOME=$PWD/.local/jdk25/jdk-25.0.3 PATH=$PWD/.local/jdk25/jdk-25.0.3/bin:$PATH ./gradlew build --no-daemon --console=plain"

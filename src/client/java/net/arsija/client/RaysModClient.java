@@ -6,9 +6,14 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
+import net.minecraft.resources.Identifier;
 import org.lwjgl.glfw.GLFW;
 
+// Rays Farms by ArSi
 public class RaysModClient implements ClientModInitializer {
+    public static final KeyMapping.Category RAYS_FARMS_CATEGORY =
+            KeyMapping.Category.register(Identifier.fromNamespaceAndPath("rays-mod", "rays_farms"));
+
     public static KeyMapping openMenuKey;
 
     @Override
@@ -17,7 +22,7 @@ public class RaysModClient implements ClientModInitializer {
                 "key.rays-mod.open_menu",
                 InputConstants.Type.KEYSYM,
                 GLFW.GLFW_KEY_R,
-                KeyMapping.Category.MISC
+                RAYS_FARMS_CATEGORY
         ));
 
         ClientLifecycleEvents.CLIENT_STARTED.register(client -> RaysDataLoader.reload());

@@ -21,8 +21,9 @@ public class RaysMenuScreen extends Screen {
     private double scroll = 0;
     private List<RaysItem> filtered = List.of();
 
+    // Rays Farms — by ArSi
     public RaysMenuScreen() {
-        super(Component.literal("Rays Menu"));
+        super(Component.literal("Rays Farms"));
     }
 
     @Override
@@ -155,6 +156,10 @@ public class RaysMenuScreen extends Screen {
             int barY = ly + (int) ((scroll / maxScroll) * (lh - barH));
             ctx.fill(lx + lw - 4, barY, lx + lw - 1, barY + barH, 0xFFAAAAAA);
         }
+
+        // Rays Farms — credit footer
+        Component credit = Component.literal("Rays Farms — by ArSi");
+        ctx.text(this.font, credit, LIST_PADDING, this.height - 18, 0xFF888888);
     }
 
     @Override

@@ -3,13 +3,13 @@
         "id": "rays-mod",
         "version": "${version}",
         "name": "Rays Farms",
-        "description": "Rays Farms — a farming helper mod by ArSi.",
+        "description": "Rays Farms — Find all Farms of Ray fast.",
         "authors": [
                 "ArSi"
         ],
         "contact": {
-                "homepage": "https://fabricmc.net/",
-                "sources": "https://github.com/FabricMC/fabric-example-mod"
+                "homepage": "https://arsija.net/",
+                "sources": "https://github.com/ArSiJa8/Rays-Mod"
         },
         "license": "CC0-1.0",
         "icon": "assets/rays-mod/icon.png",

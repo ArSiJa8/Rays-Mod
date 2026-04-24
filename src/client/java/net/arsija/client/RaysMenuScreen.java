@@ -93,7 +93,7 @@ public class RaysMenuScreen extends Screen {
     public void extractRenderState(GuiGraphicsExtractor ctx, int mouseX, int mouseY, float delta) {
         super.extractRenderState(ctx, mouseX, mouseY, delta);
 
-        ctx.centeredText(this.font, this.title, this.width / 2, 10, 0xFFFFFF);
+        ctx.centeredText(this.font, this.title, this.width / 2, 10, 0xFFFFFFFF);
 
         String status;
         if (RaysDataLoader.isLoading()) {
@@ -103,7 +103,7 @@ public class RaysMenuScreen extends Screen {
         } else {
             status = filtered.size() + " / " + RaysDataLoader.getItems().size() + " items";
         }
-        ctx.text(this.font, Component.literal(status), LIST_PADDING, 50, 0xAAAAAA);
+        ctx.text(this.font, Component.literal(status), LIST_PADDING, 50, 0xFFAAAAAA);
 
         int lx = listX(), ly = listY(), lw = listW(), lh = listH();
         ctx.fill(lx, ly, lx + lw, ly + lh, 0x80000000);
@@ -128,7 +128,7 @@ public class RaysMenuScreen extends Screen {
             if (!item.namespacedId.isEmpty()) {
                 main += " §8(" + item.namespacedId + ")";
             }
-            ctx.text(this.font, Component.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
+            ctx.text(this.font, Component.literal(main), lx + 6, rowY + 3, 0xFFFFFFFF);
 
             String sub = "";
             if (!item.category.isEmpty()) sub += item.category;
@@ -138,14 +138,14 @@ public class RaysMenuScreen extends Screen {
             }
             if (!sub.isEmpty()) {
                 ctx.text(this.font, Component.literal("§7" + sub),
-                        lx + 6, rowY + 13, 0xAAAAAA);
+                        lx + 6, rowY + 13, 0xFFAAAAAA);
             }
 
             if (item.hasVideo()) {
                 String yt = "▶ Video";
                 int ytWidth = this.font.width(yt);
                 ctx.text(this.font, Component.literal("§c" + yt),
-                        lx + lw - ytWidth - 8, rowY + 7, 0xFF5555);
+                        lx + lw - ytWidth - 8, rowY + 7, 0xFFFF5555);
             }
         }
         ctx.disableScissor();

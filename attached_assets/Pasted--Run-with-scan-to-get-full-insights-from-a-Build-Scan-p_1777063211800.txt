@@ -1,0 +1,105 @@
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 607 bytes | 33.00 KiB/s, done.
+From https://github.com/ArSiJa8/Rays-Mod
+   3a5e17b..3d1b435  main       -> origin/main
+Updating 3a5e17b..3d1b435
+Fast-forward
+ build.gradle | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>gradlew.bat build
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\build.gradle' line: 32
+
+* What went wrong:
+A problem occurred evaluating root project 'rays-mod'.
+> Cannot use Mojang mappings in a non-obfuscated environment
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>gradlew.bat build --scan
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\build.gradle' line: 32
+
+* What went wrong:
+A problem occurred evaluating root project 'rays-mod'.
+> Cannot use Mojang mappings in a non-obfuscated environment
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 6s
+
+Publishing a Build Scan to scans.gradle.com requires accepting the Gradle Terms of Use defined at https://gradle.com/help/legal-terms-of-use. Do you accept these terms? [yes, no] yes
+
+Gradle Terms of Use accepted.
+
+Publishing Build Scan to Develocity...
+https://gradle.com/s/y2mcgwqsfpsxc
+
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 539 bytes | 49.00 KiB/s, done.
+From https://github.com/ArSiJa8/Rays-Mod
+   3d1b435..f00bbd1  main       -> origin/main
+Updating 3d1b435..f00bbd1
+Fast-forward
+ build.gradle | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>gradlew.bat build
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\build.gradle' line: 32
+
+* What went wrong:
+A problem occurred evaluating root project 'rays-mod'.
+> Cannot configure layered mappings in a non-obfuscated environment
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>

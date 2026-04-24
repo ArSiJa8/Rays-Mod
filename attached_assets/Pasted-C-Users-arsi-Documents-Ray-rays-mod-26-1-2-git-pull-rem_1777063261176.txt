@@ -1,0 +1,163 @@
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 539 bytes | 49.00 KiB/s, done.
+From https://github.com/ArSiJa8/Rays-Mod
+   3d1b435..f00bbd1  main       -> origin/main
+Updating 3d1b435..f00bbd1
+Fast-forward
+ build.gradle | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>gradlew.bat build
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\build.gradle' line: 32
+
+* What went wrong:
+A problem occurred evaluating root project 'rays-mod'.
+> Cannot configure layered mappings in a non-obfuscated environment
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git pull
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 7 (delta 5), reused 7 (delta 5), pack-reused 0 (from 0)
+Unpacking objects: 100% (7/7), 1.89 KiB | 69.00 KiB/s, done.
+From https://github.com/ArSiJa8/Rays-Mod
+   f00bbd1..c931adc  main       -> origin/main
+Updating f00bbd1..c931adc
+Fast-forward
+ ...-insights-from-a-Build-Scan-p_1777063211800.txt | 105 +++++++++++++++++++++
+ build.gradle                                       |   5 +-
+ 2 files changed, 107 insertions(+), 3 deletions(-)
+ create mode 100644 attached_assets/Pasted--Run-with-scan-to-get-full-insights-from-a-Build-Scan-p_1777063211800.txt
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>gradlew.bat build
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+> Task :compileClientJava FAILED
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:3: Fehler: Symbol nicht gefunden
+import net.minecraft.Util;
+                    ^
+  Symbol: Klasse Util
+  Ort: Package net.minecraft
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:4: Fehler: Symbol nicht gefunden
+import net.minecraft.client.gui.GuiGraphics;
+                               ^
+  Symbol: Klasse GuiGraphics
+  Ort: Package net.minecraft.client.gui
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:92: Fehler: Symbol nicht gefunden
+    public void render(GuiGraphics ctx, int mouseX, int mouseY, float delta) {
+                       ^
+  Symbol: Klasse GuiGraphics
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:7: Fehler: Package net.fabricmc.fabric.api.client.keybinding.v1 ist nicht vorhanden
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+                                                   ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+    @Override
+    ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:159: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+    @Override
+    ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:170: Fehler: Symbol nicht gefunden
+                            Util.getPlatform().openUri(URI.create(item.youtubeUrl));
+                            ^
+  Symbol: Variable Util
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:178: Fehler: Methode mouseClicked in Schnittstelle ContainerEventHandler kann nicht auf die angegebenen Typen angewendet werden.
+        return super.mouseClicked(mouseX, mouseY, button);
+                    ^
+  Erforderlich: MouseButtonEvent,boolean
+  Ermittelt:    double,double,int
+  Grund: Liste der tats├ñchlichen Argumente hat eine andere L├ñnge als die der formalen Argumente
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:20: Fehler: Inkompatible Typen: String kann nicht in Category konvertiert werden
+                "category.rays-mod"
+                ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:16: Fehler: Symbol nicht gefunden
+        openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+                      ^
+  Symbol: Variable KeyBindingHelper
+  Ort: Klasse RaysModClient
+Hinweis: Einige Meldungen wurden vereinfacht. Wiederholen Sie die Kompilierung mit -Xdiags:verbose, um die vollst├ñndige Ausgabe abzurufen
+10 Fehler
+
+[Incubating] Problems report is available at: file:///C:/Users/arsi/Documents/.Ray/rays-mod-26.1.2/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileClientJava'.
+> Compilation failed; see the compiler output below.
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:178: Fehler: Methode mouseClicked in Schnittstelle ContainerEventHandler kann nicht auf die angegebenen Typen angewendet werden.
+          return super.mouseClicked(mouseX, mouseY, button);
+                      ^
+    Erforderlich: MouseButtonEvent,boolean
+    Ermittelt:    double,double,int
+    Grund: Liste der tats├ñchlichen Argumente hat eine andere L├ñnge als die der formalen Argumente
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:20: Fehler: Inkompatible Typen: String kann nicht in Category konvertiert werden
+                  "category.rays-mod"
+                  ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:3: Fehler: Symbol nicht gefunden
+  import net.minecraft.Util;
+                      ^
+    Symbol: Klasse Util
+    Ort: Package net.minecraft
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:4: Fehler: Symbol nicht gefunden
+  import net.minecraft.client.gui.GuiGraphics;
+                                 ^
+    Symbol: Klasse GuiGraphics
+    Ort: Package net.minecraft.client.gui
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:92: Fehler: Symbol nicht gefunden
+      public void render(GuiGraphics ctx, int mouseX, int mouseY, float delta) {
+                         ^
+    Symbol: Klasse GuiGraphics
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:170: Fehler: Symbol nicht gefunden
+                              Util.getPlatform().openUri(URI.create(item.youtubeUrl));
+                              ^
+    Symbol: Variable Util
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:16: Fehler: Symbol nicht gefunden
+          openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyMapping(
+                        ^
+    Symbol: Variable KeyBindingHelper
+    Ort: Klasse RaysModClient
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+      @Override
+      ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:159: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+      @Override
+      ^
+  Hinweis: Einige Meldungen wurden vereinfacht. Wiederholen Sie die Kompilierung mit -Xdiags:verbose, um die vollst├ñndige Ausgabe abzurufen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:7: Fehler: Package net.fabricmc.fabric.api.client.keybinding.v1 ist nicht vorhanden
+  import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+                                                     ^
+  10 Fehler
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 5s
+3 actionable tasks: 2 executed, 1 up-to-date
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>

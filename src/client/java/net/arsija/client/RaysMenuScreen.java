@@ -1,11 +1,12 @@
 package net.arsija.client;
 
-import net.minecraft.Util;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.Util;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -89,10 +90,10 @@ public class RaysMenuScreen extends Screen {
     private int listH() { return this.height - listY() - 40; }
 
     @Override
-    public void render(GuiGraphics ctx, int mouseX, int mouseY, float delta) {
-        super.render(ctx, mouseX, mouseY, delta);
+    public void extractRenderState(GuiGraphicsExtractor ctx, int mouseX, int mouseY, float delta) {
+        super.extractRenderState(ctx, mouseX, mouseY, delta);
 
-        ctx.drawCenteredString(this.font, this.title, this.width / 2, 10, 0xFFFFFF);
+        ctx.centeredText(this.font, this.title, this.width / 2, 10, 0xFFFFFF);
 
         String status;
         if (RaysDataLoader.isLoading()) {
@@ -102,11 +103,11 @@ public class RaysMenuScreen extends Screen {
         } else {
             status = filtered.size() + " / " + RaysDataLoader.getItems().size() + " items";
         }
-        ctx.drawString(this.font, Component.literal(status), LIST_PADDING, 50, 0xAAAAAA);
+        ctx.text(this.font, Component.literal(status), LIST_PADDING, 50, 0xAAAAAA);
 
         int lx = listX(), ly = listY(), lw = listW(), lh = listH();
         ctx.fill(lx, ly, lx + lw, ly + lh, 0x80000000);
-        ctx.renderOutline(lx, ly, lw, lh, 0xFF333333);
+        ctx.outline(lx, ly, lw, lh, 0xFF333333);
 
         int totalHeight = filtered.size() * ROW_HEIGHT;
         int maxScroll = Math.max(0, totalHeight - lh);
@@ -127,7 +128,7 @@ public class RaysMenuScreen extends Screen {
             if (!item.namespacedId.isEmpty()) {
                 main += " §8(" + item.namespacedId + ")";
             }
-            ctx.drawString(this.font, Component.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
+            ctx.text(this.font, Component.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
 
             String sub = "";
             if (!item.category.isEmpty()) sub += item.category;
@@ -136,14 +137,14 @@ public class RaysMenuScreen extends Screen {
                 sub += item.farmingMethod;
             }
             if (!sub.isEmpty()) {
-                ctx.drawString(this.font, Component.literal("§7" + sub),
+                ctx.text(this.font, Component.literal("§7" + sub),
                         lx + 6, rowY + 13, 0xAAAAAA);
             }
 
             if (item.hasVideo()) {
                 String yt = "▶ Video";
                 int ytWidth = this.font.width(yt);
-                ctx.drawString(this.font, Component.literal("§c" + yt),
+                ctx.text(this.font, Component.literal("§c" + yt),
                         lx + lw - ytWidth - 8, rowY + 7, 0xFF5555);
             }
         }
@@ -157,8 +158,10 @@ public class RaysMenuScreen extends Screen {
     }
 
     @Override
-    public boolean mouseClicked(double mouseX, double mouseY, int button) {
-        if (button == 0) {
+    public boolean mouseClicked(MouseButtonEvent event, boolean doubleClick) {
+        if (event.button() == 0) {
+            double mouseX = event.x();
+            double mouseY = event.y();
             int lx = listX(), ly = listY(), lw = listW(), lh = listH();
             if (mouseX >= lx && mouseX < lx + lw && mouseY >= ly && mouseY < ly + lh) {
                 int rel = (int) (mouseY - ly + scroll);
@@ -175,7 +178,7 @@ public class RaysMenuScreen extends Screen {
                 }
             }
         }
-        return super.mouseClicked(mouseX, mouseY, button);
+        return super.mouseClicked(event, doubleClick);
     }
 
     @Override

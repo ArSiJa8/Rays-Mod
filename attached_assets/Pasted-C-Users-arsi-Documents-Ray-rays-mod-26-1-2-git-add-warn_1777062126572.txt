@@ -1,0 +1,602 @@
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git add .
+warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.github/workflows/build.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'LICENSE', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'build.gradle', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'gradle.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'settings.gradle', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/client/java/net/arsija/client/RaysModClient.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/client/java/net/arsija/client/mixin/ExampleClientMixin.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/client/resources/rays-mod.client.mixins.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/net/arsija/RaysMod.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/net/arsija/mixin/ExampleMixin.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/fabric.mod.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/rays-mod.mixins.json', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git commit -m "Initial commit"
+[main (root-commit) 1a2db6e] Initial commit
+ 20 files changed, 804 insertions(+)
+ create mode 100644 .gitattributes
+ create mode 100644 .github/workflows/build.yml
+ create mode 100644 .gitignore
+ create mode 100644 LICENSE
+ create mode 100644 README.md
+ create mode 100644 build.gradle
+ create mode 100644 gradle.properties
+ create mode 100644 gradle/wrapper/gradle-wrapper.jar
+ create mode 100644 gradle/wrapper/gradle-wrapper.properties
+ create mode 100644 gradlew
+ create mode 100644 gradlew.bat
+ create mode 100644 settings.gradle
+ create mode 100644 src/client/java/net/arsija/client/RaysModClient.java
+ create mode 100644 src/client/java/net/arsija/client/mixin/ExampleClientMixin.java
+ create mode 100644 src/client/resources/rays-mod.client.mixins.json
+ create mode 100644 src/main/java/net/arsija/RaysMod.java
+ create mode 100644 src/main/java/net/arsija/mixin/ExampleMixin.java
+ create mode 100644 src/main/resources/assets/rays-mod/icon.png
+ create mode 100644 src/main/resources/fabric.mod.json
+ create mode 100644 src/main/resources/rays-mod.mixins.json
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git push -u origin main
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (42/42), 63.90 KiB | 5.81 MiB/s, done.
+Total 42 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/ArSiJa8/Rays-Mod.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>git pull
+remote: Enumerating objects: 37, done.
+remote: Counting objects: 100% (37/37), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 28 (delta 5), reused 28 (delta 5), pack-reused 0 (from 0)
+Unpacking objects: 100% (28/28), 291.98 KiB | 2.86 MiB/s, done.
+From https://github.com/ArSiJa8/Rays-Mod
+   1a2db6e..9b06bbd  main       -> origin/main
+Updating 1a2db6e..9b06bbd
+Fast-forward
+ .replit                                            |   30 +
+ attached_assets/content-1777061029997.md           | 1565 ++++++++++++++++++++
+ attached_assets/content-1777061331082.md           | 1565 ++++++++++++++++++++
+ attached_assets/screenshot-1777061029114.png       |  Bin 0 -> 237620 bytes
+ attached_assets/screenshot-1777061330425.png       |  Bin 0 -> 237620 bytes
+ gradlew                                            |    0
+ replit.nix                                         |    6 +
+ .../java/net/arsija/client/RaysDataLoader.java     |  190 +++
+ src/client/java/net/arsija/client/RaysItem.java    |   22 +
+ .../java/net/arsija/client/RaysMenuScreen.java     |  189 +++
+ .../java/net/arsija/client/RaysModClient.java      |   33 +-
+ .../resources/assets/rays-mod/lang/en_us.json      |    4 +
+ 12 files changed, 3599 insertions(+), 5 deletions(-)
+ create mode 100644 .replit
+ create mode 100644 attached_assets/content-1777061029997.md
+ create mode 100644 attached_assets/content-1777061331082.md
+ create mode 100644 attached_assets/screenshot-1777061029114.png
+ create mode 100644 attached_assets/screenshot-1777061330425.png
+ mode change 100644 => 100755 gradlew
+ create mode 100644 replit.nix
+ create mode 100644 src/client/java/net/arsija/client/RaysDataLoader.java
+ create mode 100644 src/client/java/net/arsija/client/RaysItem.java
+ create mode 100644 src/client/java/net/arsija/client/RaysMenuScreen.java
+ create mode 100644 src/client/resources/assets/rays-mod/lang/en_us.json
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>java -version
+java version "25.0.2" 2026-01-20 LTS
+Java(TM) SE Runtime Environment (build 25.0.2+10-LTS-69)
+Java HotSpot(TM) 64-Bit Server VM (build 25.0.2+10-LTS-69, mixed mode, sharing)
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>gradlew.bat build
+Downloading https://services.gradle.org/distributions/gradle-9.4.1-bin.zip
+.............10%.............20%.............30%.............40%.............50%.............60%..............70%.............80%.............90%.............100%
+
+Welcome to Gradle 9.4.1!
+
+Here are the highlights of this release:
+ - Java 26 support
+ - Non-class-based JVM tests
+ - Enhanced console progress bar
+
+For more details see https://docs.gradle.org/9.4.1/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Configure project :
+Fabric Loom: 1.16.1
+
+> Task :compileClientJava FAILED
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:3: Fehler: Symbol nicht gefunden
+import net.minecraft.client.gui.DrawContext;
+                               ^
+  Symbol: Klasse DrawContext
+  Ort: Package net.minecraft.client.gui
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:4: Fehler: Package net.minecraft.client.gui.screen ist nicht vorhanden
+import net.minecraft.client.gui.screen.Screen;
+                                      ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:5: Fehler: Package net.minecraft.client.gui.widget ist nicht vorhanden
+import net.minecraft.client.gui.widget.ButtonWidget;
+                                      ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:6: Fehler: Package net.minecraft.client.gui.widget ist nicht vorhanden
+import net.minecraft.client.gui.widget.TextFieldWidget;
+                                      ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:7: Fehler: Package net.minecraft.text ist nicht vorhanden
+import net.minecraft.text.Text;
+                         ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:14: Fehler: Symbol nicht gefunden
+public class RaysMenuScreen extends Screen {
+                                    ^
+  Symbol: Klasse Screen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:18: Fehler: Symbol nicht gefunden
+    private TextFieldWidget searchField;
+            ^
+  Symbol: Klasse TextFieldWidget
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:88: Fehler: Symbol nicht gefunden
+    public void render(DrawContext ctx, int mouseX, int mouseY, float delta) {
+                       ^
+  Symbol: Klasse DrawContext
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:6: Fehler: Package net.fabricmc.fabric.api.client.keybinding.v1 ist nicht vorhanden
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+                                                   ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:7: Fehler: Package net.minecraft.client.option ist nicht vorhanden
+import net.minecraft.client.option.KeyBinding;
+                                  ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:8: Fehler: Package net.minecraft.client.util ist nicht vorhanden
+import net.minecraft.client.util.InputUtil;
+                                ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:12: Fehler: Symbol nicht gefunden
+    public static KeyBinding openMenuKey;
+                  ^
+  Symbol: Klasse KeyBinding
+  Ort: Klasse RaysModClient
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:26: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+    @Override
+    ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:28: Fehler: Symbol nicht gefunden
+        super.init();
+        ^
+  Symbol: Variable super
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:34: Fehler: Symbol nicht gefunden
+        int searchW = Math.min(420, this.width - 2 * LIST_PADDING - reloadW - gap);
+                                        ^
+  Symbol: Variable width
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:35: Fehler: Symbol nicht gefunden
+        int searchX = (this.width - (searchW + gap + reloadW)) / 2;
+                           ^
+  Symbol: Variable width
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:37: Fehler: Symbol nicht gefunden
+        this.searchField = new TextFieldWidget(this.textRenderer, searchX, searchY, searchW, searchH,
+                               ^
+  Symbol: Klasse TextFieldWidget
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:37: Fehler: Symbol nicht gefunden
+        this.searchField = new TextFieldWidget(this.textRenderer, searchX, searchY, searchW, searchH,
+                                                   ^
+  Symbol: Variable textRenderer
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:38: Fehler: Symbol nicht gefunden
+                Text.literal("Search"));
+                ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:40: Fehler: Symbol nicht gefunden
+        this.searchField.setPlaceholder(Text.literal("Search items..."));
+                                        ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:45: Fehler: Symbol nicht gefunden
+        ButtonWidget reloadButton = ButtonWidget.builder(Text.literal("Reload"),
+        ^
+  Symbol: Klasse ButtonWidget
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:45: Fehler: Symbol nicht gefunden
+        ButtonWidget reloadButton = ButtonWidget.builder(Text.literal("Reload"),
+                                    ^
+  Symbol: Variable ButtonWidget
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:45: Fehler: Symbol nicht gefunden
+        ButtonWidget reloadButton = ButtonWidget.builder(Text.literal("Reload"),
+                                                         ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:47: Fehler: Symbol nicht gefunden
+                                this.client.execute(this::applyFilter)))
+                                    ^
+  Symbol: Variable client
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+        ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+        ^
+  Symbol: Klasse ButtonWidget
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:53: Fehler: Symbol nicht gefunden
+                .dimensions(this.width - LIST_PADDING - 80, this.height - 30, 80, 20)
+                                ^
+  Symbol: Variable width
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:53: Fehler: Symbol nicht gefunden
+                .dimensions(this.width - LIST_PADDING - 80, this.height - 30, 80, 20)
+                                                                ^
+  Symbol: Variable height
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+        ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+                                   ^
+  Symbol: Variable ButtonWidget
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+        ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+                                                        ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+        ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+                                                                                        ^
+  Symbol: Methode close()
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:84: Fehler: Symbol nicht gefunden
+    private int listW() { return this.width - 2 * LIST_PADDING; }
+                                     ^
+  Symbol: Variable width
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:85: Fehler: Symbol nicht gefunden
+    private int listH() { return this.height - listY() - 40; }
+                                     ^
+  Symbol: Variable height
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:87: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+    @Override
+    ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:89: Fehler: Symbol nicht gefunden
+        super.render(ctx, mouseX, mouseY, delta);
+        ^
+  Symbol: Variable super
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Symbol nicht gefunden
+        ctx.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 0xFFFFFF);
+                                           ^
+  Symbol: Variable textRenderer
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Symbol nicht gefunden
+        ctx.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 0xFFFFFF);
+                                                              ^
+  Symbol: Variable title
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Symbol nicht gefunden
+        ctx.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 0xFFFFFF);
+                                                                          ^
+  Symbol: Variable width
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:101: Fehler: Symbol nicht gefunden
+        ctx.drawTextWithShadow(this.textRenderer, Text.literal(status), LIST_PADDING, 50, 0xAAAAAA);
+                                   ^
+  Symbol: Variable textRenderer
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:101: Fehler: Symbol nicht gefunden
+        ctx.drawTextWithShadow(this.textRenderer, Text.literal(status), LIST_PADDING, 50, 0xAAAAAA);
+                                                  ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:126: Fehler: Symbol nicht gefunden
+            ctx.drawTextWithShadow(this.textRenderer, Text.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
+                                       ^
+  Symbol: Variable textRenderer
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:126: Fehler: Symbol nicht gefunden
+            ctx.drawTextWithShadow(this.textRenderer, Text.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
+                                                      ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:135: Fehler: Symbol nicht gefunden
+                ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬º7" + sub),
+                                           ^
+  Symbol: Variable textRenderer
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:135: Fehler: Symbol nicht gefunden
+                ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬º7" + sub),
+                                                          ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:141: Fehler: Symbol nicht gefunden
+                int ytWidth = this.textRenderer.getWidth(yt);
+                                  ^
+  Symbol: Variable textRenderer
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:142: Fehler: Symbol nicht gefunden
+                ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬ºc" + yt),
+                                           ^
+  Symbol: Variable textRenderer
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:142: Fehler: Symbol nicht gefunden
+                ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬ºc" + yt),
+                                                          ^
+  Symbol: Variable Text
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:157: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+    @Override
+    ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:168: Fehler: Symbol nicht gefunden
+                            Util.getOperatingSystem().open(URI.create(item.youtubeUrl));
+                                ^
+  Symbol: Methode getOperatingSystem()
+  Ort: Klasse Util
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:176: Fehler: Symbol nicht gefunden
+        return super.mouseClicked(mouseX, mouseY, button);
+               ^
+  Symbol: Variable super
+  Ort: Klasse RaysMenuScreen
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:179: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+    @Override
+    ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:185: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+    @Override
+    ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:16: Fehler: Symbol nicht gefunden
+        openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                                                              ^
+  Symbol: Klasse KeyBinding
+  Ort: Klasse RaysModClient
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:18: Fehler: Package InputUtil ist nicht vorhanden
+                InputUtil.Type.KEYSYM,
+                         ^
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:16: Fehler: Symbol nicht gefunden
+        openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                      ^
+  Symbol: Variable KeyBindingHelper
+  Ort: Klasse RaysModClient
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:27: Fehler: Symbol nicht gefunden
+                if (client.currentScreen == null) {
+                          ^
+  Symbol: Variable currentScreen
+  Ort: Variable client von Typ Minecraft
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:28: Fehler: Inkompatible Typen: RaysMenuScreen kann nicht in Screen konvertiert werden
+                    client.setScreen(new RaysMenuScreen());
+                                     ^
+Hinweis: Einige Meldungen wurden vereinfacht. Wiederholen Sie die Kompilierung mit -Xdiags:verbose, um die vollst├ñndige Ausgabe abzurufen
+56 Fehler
+
+[Incubating] Problems report is available at: file:///C:/Users/arsi/Documents/.Ray/rays-mod-26.1.2/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileClientJava'.
+> Compilation failed; see the compiler output below.
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+          ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+                                                                                          ^
+    Symbol: Methode close()
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:28: Fehler: Inkompatible Typen: RaysMenuScreen kann nicht in Screen konvertiert werden
+                      client.setScreen(new RaysMenuScreen());
+                                       ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:3: Fehler: Symbol nicht gefunden
+  import net.minecraft.client.gui.DrawContext;
+                                 ^
+    Symbol: Klasse DrawContext
+    Ort: Package net.minecraft.client.gui
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:18: Fehler: Symbol nicht gefunden
+      private TextFieldWidget searchField;
+              ^
+    Symbol: Klasse TextFieldWidget
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:88: Fehler: Symbol nicht gefunden
+      public void render(DrawContext ctx, int mouseX, int mouseY, float delta) {
+                         ^
+    Symbol: Klasse DrawContext
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:12: Fehler: Symbol nicht gefunden
+      public static KeyBinding openMenuKey;
+                    ^
+    Symbol: Klasse KeyBinding
+    Ort: Klasse RaysModClient
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:28: Fehler: Symbol nicht gefunden
+          super.init();
+          ^
+    Symbol: Variable super
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:37: Fehler: Symbol nicht gefunden
+          this.searchField = new TextFieldWidget(this.textRenderer, searchX, searchY, searchW, searchH,
+                                 ^
+    Symbol: Klasse TextFieldWidget
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:38: Fehler: Symbol nicht gefunden
+                  Text.literal("Search"));
+                  ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:40: Fehler: Symbol nicht gefunden
+          this.searchField.setPlaceholder(Text.literal("Search items..."));
+                                          ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:45: Fehler: Symbol nicht gefunden
+          ButtonWidget reloadButton = ButtonWidget.builder(Text.literal("Reload"),
+          ^
+    Symbol: Klasse ButtonWidget
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:45: Fehler: Symbol nicht gefunden
+          ButtonWidget reloadButton = ButtonWidget.builder(Text.literal("Reload"),
+                                      ^
+    Symbol: Variable ButtonWidget
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:45: Fehler: Symbol nicht gefunden
+          ButtonWidget reloadButton = ButtonWidget.builder(Text.literal("Reload"),
+                                                           ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+          ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+          ^
+    Symbol: Klasse ButtonWidget
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+          ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+                                     ^
+    Symbol: Variable ButtonWidget
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:52: Fehler: Symbol nicht gefunden
+          ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+                                                          ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:89: Fehler: Symbol nicht gefunden
+          super.render(ctx, mouseX, mouseY, delta);
+          ^
+    Symbol: Variable super
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:101: Fehler: Symbol nicht gefunden
+          ctx.drawTextWithShadow(this.textRenderer, Text.literal(status), LIST_PADDING, 50, 0xAAAAAA);
+                                                    ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:126: Fehler: Symbol nicht gefunden
+              ctx.drawTextWithShadow(this.textRenderer, Text.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
+                                                        ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:135: Fehler: Symbol nicht gefunden
+                  ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬º7" + sub),
+                                                            ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:142: Fehler: Symbol nicht gefunden
+                  ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬ºc" + yt),
+                                                            ^
+    Symbol: Variable Text
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:176: Fehler: Symbol nicht gefunden
+          return super.mouseClicked(mouseX, mouseY, button);
+                 ^
+    Symbol: Variable super
+    Ort: Klasse RaysMenuScreen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:16: Fehler: Symbol nicht gefunden
+          openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                                                                ^
+    Symbol: Klasse KeyBinding
+    Ort: Klasse RaysModClient
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:16: Fehler: Symbol nicht gefunden
+          openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                        ^
+    Symbol: Variable KeyBindingHelper
+    Ort: Klasse RaysModClient
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:27: Fehler: Symbol nicht gefunden
+                  if (client.currentScreen == null) {
+                            ^
+    Symbol: Variable currentScreen
+    Ort: Variable client von Typ Minecraft
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:26: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+      @Override
+      ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:87: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+      @Override
+      ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:157: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+      @Override
+      ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:179: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+      @Override
+      ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:185: Fehler: Methode ├╝berschreibt oder implementiert keine Methode aus einem Supertyp
+      @Override
+      ^
+  Hinweis: Einige Meldungen wurden vereinfacht. Wiederholen Sie die Kompilierung mit -Xdiags:verbose, um die vollst├ñndige Ausgabe abzurufen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:14: Fehler: Symbol nicht gefunden
+  public class RaysMenuScreen extends Screen {
+                                      ^
+    Symbol: Klasse Screen
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:34: Fehler: Symbol nicht gefunden
+          int searchW = Math.min(420, this.width - 2 * LIST_PADDING - reloadW - gap);
+                                          ^
+    Symbol: Variable width
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:35: Fehler: Symbol nicht gefunden
+          int searchX = (this.width - (searchW + gap + reloadW)) / 2;
+                             ^
+    Symbol: Variable width
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:37: Fehler: Symbol nicht gefunden
+          this.searchField = new TextFieldWidget(this.textRenderer, searchX, searchY, searchW, searchH,
+                                                     ^
+    Symbol: Variable textRenderer
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:47: Fehler: Symbol nicht gefunden
+                                  this.client.execute(this::applyFilter)))
+                                      ^
+    Symbol: Variable client
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:53: Fehler: Symbol nicht gefunden
+                  .dimensions(this.width - LIST_PADDING - 80, this.height - 30, 80, 20)
+                                  ^
+    Symbol: Variable width
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:53: Fehler: Symbol nicht gefunden
+                  .dimensions(this.width - LIST_PADDING - 80, this.height - 30, 80, 20)
+                                                                  ^
+    Symbol: Variable height
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:84: Fehler: Symbol nicht gefunden
+      private int listW() { return this.width - 2 * LIST_PADDING; }
+                                       ^
+    Symbol: Variable width
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:85: Fehler: Symbol nicht gefunden
+      private int listH() { return this.height - listY() - 40; }
+                                       ^
+    Symbol: Variable height
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Symbol nicht gefunden
+          ctx.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 0xFFFFFF);
+                                             ^
+    Symbol: Variable textRenderer
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Symbol nicht gefunden
+          ctx.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 0xFFFFFF);
+                                                                ^
+    Symbol: Variable title
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:91: Fehler: Symbol nicht gefunden
+          ctx.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 0xFFFFFF);
+                                                                            ^
+    Symbol: Variable width
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:101: Fehler: Symbol nicht gefunden
+          ctx.drawTextWithShadow(this.textRenderer, Text.literal(status), LIST_PADDING, 50, 0xAAAAAA);
+                                     ^
+    Symbol: Variable textRenderer
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:126: Fehler: Symbol nicht gefunden
+              ctx.drawTextWithShadow(this.textRenderer, Text.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
+                                         ^
+    Symbol: Variable textRenderer
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:135: Fehler: Symbol nicht gefunden
+                  ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬º7" + sub),
+                                             ^
+    Symbol: Variable textRenderer
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:141: Fehler: Symbol nicht gefunden
+                  int ytWidth = this.textRenderer.getWidth(yt);
+                                    ^
+    Symbol: Variable textRenderer
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:142: Fehler: Symbol nicht gefunden
+                  ctx.drawTextWithShadow(this.textRenderer, Text.literal("┬ºc" + yt),
+                                             ^
+    Symbol: Variable textRenderer
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:168: Fehler: Symbol nicht gefunden
+                              Util.getOperatingSystem().open(URI.create(item.youtubeUrl));
+                                  ^
+    Symbol: Methode getOperatingSystem()
+    Ort: Klasse Util
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:4: Fehler: Package net.minecraft.client.gui.screen ist nicht vorhanden
+  import net.minecraft.client.gui.screen.Screen;
+                                        ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:5: Fehler: Package net.minecraft.client.gui.widget ist nicht vorhanden
+  import net.minecraft.client.gui.widget.ButtonWidget;
+                                        ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:6: Fehler: Package net.minecraft.client.gui.widget ist nicht vorhanden
+  import net.minecraft.client.gui.widget.TextFieldWidget;
+                                        ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysMenuScreen.java:7: Fehler: Package net.minecraft.text ist nicht vorhanden
+  import net.minecraft.text.Text;
+                           ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:6: Fehler: Package net.fabricmc.fabric.api.client.keybinding.v1 ist nicht vorhanden
+  import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+                                                     ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:7: Fehler: Package net.minecraft.client.option ist nicht vorhanden
+  import net.minecraft.client.option.KeyBinding;
+                                    ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:8: Fehler: Package net.minecraft.client.util ist nicht vorhanden
+  import net.minecraft.client.util.InputUtil;
+                                  ^
+  C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2\src\client\java\net\arsija\client\RaysModClient.java:18: Fehler: Package InputUtil ist nicht vorhanden
+                  InputUtil.Type.KEYSYM,
+                           ^
+  56 Fehler
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 48s
+3 actionable tasks: 3 executed
+
+C:\Users\arsi\Documents\.Ray\rays-mod-26.1.2>

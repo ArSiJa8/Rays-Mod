@@ -1,13 +1,14 @@
 package net.arsija.client;
 
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.TextFieldWidget;
-import net.minecraft.text.Text;
-import net.minecraft.util.Util;
+import net.minecraft.Util;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -15,12 +16,12 @@ public class RaysMenuScreen extends Screen {
     private static final int ROW_HEIGHT = 22;
     private static final int LIST_PADDING = 20;
 
-    private TextFieldWidget searchField;
+    private EditBox searchField;
     private double scroll = 0;
     private List<RaysItem> filtered = List.of();
 
     public RaysMenuScreen() {
-        super(Text.literal("Rays Menu"));
+        super(Component.literal("Rays Menu"));
     }
 
     @Override
@@ -34,25 +35,28 @@ public class RaysMenuScreen extends Screen {
         int searchW = Math.min(420, this.width - 2 * LIST_PADDING - reloadW - gap);
         int searchX = (this.width - (searchW + gap + reloadW)) / 2;
 
-        this.searchField = new TextFieldWidget(this.textRenderer, searchX, searchY, searchW, searchH,
-                Text.literal("Search"));
+        this.searchField = new EditBox(this.font, searchX, searchY, searchW, searchH,
+                Component.literal("Search"));
         this.searchField.setMaxLength(64);
-        this.searchField.setPlaceholder(Text.literal("Search items..."));
-        this.searchField.setChangedListener(s -> applyFilter());
-        this.addSelectableChild(this.searchField);
+        this.searchField.setHint(Component.literal("Search items..."));
+        this.searchField.setResponder(s -> applyFilter());
+        this.addRenderableWidget(this.searchField);
         this.setInitialFocus(this.searchField);
 
-        ButtonWidget reloadButton = ButtonWidget.builder(Text.literal("Reload"),
-                        b -> RaysDataLoader.reload().thenRun(() ->
-                                this.client.execute(this::applyFilter)))
-                .dimensions(searchX + searchW + gap, searchY, reloadW, searchH)
+        Button reloadButton = Button.builder(Component.literal("Reload"),
+                        b -> RaysDataLoader.reload().thenRun(() -> {
+                            if (this.minecraft != null) {
+                                this.minecraft.execute(this::applyFilter);
+                            }
+                        }))
+                .bounds(searchX + searchW + gap, searchY, reloadW, searchH)
                 .build();
-        this.addDrawableChild(reloadButton);
+        this.addRenderableWidget(reloadButton);
 
-        ButtonWidget closeButton = ButtonWidget.builder(Text.literal("Close"), b -> this.close())
-                .dimensions(this.width - LIST_PADDING - 80, this.height - 30, 80, 20)
+        Button closeButton = Button.builder(Component.literal("Close"), b -> this.onClose())
+                .bounds(this.width - LIST_PADDING - 80, this.height - 30, 80, 20)
                 .build();
-        this.addDrawableChild(closeButton);
+        this.addRenderableWidget(closeButton);
 
         applyFilter();
     }
@@ -60,12 +64,12 @@ public class RaysMenuScreen extends Screen {
     private void applyFilter() {
         String q = this.searchField == null
                 ? ""
-                : this.searchField.getText().trim().toLowerCase(Locale.ROOT);
+                : this.searchField.getValue().trim().toLowerCase(Locale.ROOT);
         List<RaysItem> all = RaysDataLoader.getItems();
         if (q.isEmpty()) {
             this.filtered = all;
         } else {
-            List<RaysItem> out = new java.util.ArrayList<>();
+            List<RaysItem> out = new ArrayList<>();
             for (RaysItem it : all) {
                 if (it.displayName.toLowerCase(Locale.ROOT).contains(q)
                         || it.namespacedId.toLowerCase(Locale.ROOT).contains(q)
@@ -85,10 +89,10 @@ public class RaysMenuScreen extends Screen {
     private int listH() { return this.height - listY() - 40; }
 
     @Override
-    public void render(DrawContext ctx, int mouseX, int mouseY, float delta) {
+    public void render(GuiGraphics ctx, int mouseX, int mouseY, float delta) {
         super.render(ctx, mouseX, mouseY, delta);
 
-        ctx.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 10, 0xFFFFFF);
+        ctx.drawCenteredString(this.font, this.title, this.width / 2, 10, 0xFFFFFF);
 
         String status;
         if (RaysDataLoader.isLoading()) {
@@ -98,11 +102,11 @@ public class RaysMenuScreen extends Screen {
         } else {
             status = filtered.size() + " / " + RaysDataLoader.getItems().size() + " items";
         }
-        ctx.drawTextWithShadow(this.textRenderer, Text.literal(status), LIST_PADDING, 50, 0xAAAAAA);
+        ctx.drawString(this.font, Component.literal(status), LIST_PADDING, 50, 0xAAAAAA);
 
         int lx = listX(), ly = listY(), lw = listW(), lh = listH();
         ctx.fill(lx, ly, lx + lw, ly + lh, 0x80000000);
-        ctx.drawBorder(lx, ly, lw, lh, 0xFF333333);
+        ctx.renderOutline(lx, ly, lw, lh, 0xFF333333);
 
         int totalHeight = filtered.size() * ROW_HEIGHT;
         int maxScroll = Math.max(0, totalHeight - lh);
@@ -123,7 +127,7 @@ public class RaysMenuScreen extends Screen {
             if (!item.namespacedId.isEmpty()) {
                 main += " §8(" + item.namespacedId + ")";
             }
-            ctx.drawTextWithShadow(this.textRenderer, Text.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
+            ctx.drawString(this.font, Component.literal(main), lx + 6, rowY + 3, 0xFFFFFF);
 
             String sub = "";
             if (!item.category.isEmpty()) sub += item.category;
@@ -132,14 +136,14 @@ public class RaysMenuScreen extends Screen {
                 sub += item.farmingMethod;
             }
             if (!sub.isEmpty()) {
-                ctx.drawTextWithShadow(this.textRenderer, Text.literal("§7" + sub),
+                ctx.drawString(this.font, Component.literal("§7" + sub),
                         lx + 6, rowY + 13, 0xAAAAAA);
             }
 
             if (item.hasVideo()) {
                 String yt = "▶ Video";
-                int ytWidth = this.textRenderer.getWidth(yt);
-                ctx.drawTextWithShadow(this.textRenderer, Text.literal("§c" + yt),
+                int ytWidth = this.font.width(yt);
+                ctx.drawString(this.font, Component.literal("§c" + yt),
                         lx + lw - ytWidth - 8, rowY + 7, 0xFF5555);
             }
         }
@@ -150,8 +154,6 @@ public class RaysMenuScreen extends Screen {
             int barY = ly + (int) ((scroll / maxScroll) * (lh - barH));
             ctx.fill(lx + lw - 4, barY, lx + lw - 1, barY + barH, 0xFFAAAAAA);
         }
-
-        this.searchField.render(ctx, mouseX, mouseY, delta);
     }
 
     @Override
@@ -165,7 +167,7 @@ public class RaysMenuScreen extends Screen {
                     RaysItem item = filtered.get(idx);
                     if (item.hasVideo()) {
                         try {
-                            Util.getOperatingSystem().open(URI.create(item.youtubeUrl));
+                            Util.getPlatform().openUri(URI.create(item.youtubeUrl));
                         } catch (Exception ignored) {
                         }
                     }
@@ -177,13 +179,13 @@ public class RaysMenuScreen extends Screen {
     }
 
     @Override
-    public boolean mouseScrolled(double mouseX, double mouseY, double horizontal, double vertical) {
-        scroll -= vertical * ROW_HEIGHT;
+    public boolean mouseScrolled(double mouseX, double mouseY, double horizontalAmount, double verticalAmount) {
+        scroll -= verticalAmount * ROW_HEIGHT;
         return true;
     }
 
     @Override
-    public boolean shouldPause() {
+    public boolean isPauseScreen() {
         return false;
     }
 }

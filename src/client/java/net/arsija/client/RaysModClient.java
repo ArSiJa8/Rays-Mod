@@ -29,8 +29,8 @@ public class RaysModClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openMenuKey.consumeClick()) {
-                if (client.screen == null) {
-                    client.setScreen(new RaysMenuScreen());
+                if (client.gui.screen() == null) {
+                    client.setScreenAndShow(new RaysMenuScreen());
                 }
             }
         });
